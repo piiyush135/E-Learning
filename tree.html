@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tree Data Structure</title>
+  <link rel="stylesheet" href="tree.css">
+</head>
+<body>
+  <header>
+    <h1>Exploring Trees</h1>
+    <a href="dsa.html" class="back-button">Back</a>
+  </header>
+
+  <main>
+    <section id="tree-introduction">
+      <h2>Introduction to Trees</h2>
+      <p>A tree data structure is a hierarchical structure that is used to represent and organize data in a way that is easy to navigate and search. It is a collection of nodes that are connected by edges and has a hierarchical relationship between the nodes. 
+
+        The topmost node of the tree is called the root, and the nodes below it are called the child nodes. Each node can have multiple child nodes, and these child nodes can also have their own child nodes, forming a recursive structure.A tree is a hierarchical data structure that consists of nodes connected by edges. Each node contains a value and may also have a link to one or more child nodes.</p>
+      <img src="Tree-Data-Structure--intro.png" alt="Tree Diagram">
+    </section>
+
+    <section id="tree-types">
+      <h2>Types of Trees</h2>
+      <div class="tree-type">
+        <h3>Binary Tree</h3>
+        <p>A binary tree is a hierarchical data structure in which each node has at most two children, referred to as the left child and the right child.</p>
+        <p>Here are some key points about binary trees:</p>
+        <ul>
+          <li><strong>Node Structure:</strong> Each node contains some data and pointers or references to its left child and right child nodes, or null if the child does not exist.</li>
+          <li><strong>Root Node:</strong> The topmost node of the tree is called the root node.</li>
+          <li><strong>Parent, Child, and Siblings:</strong> Each node (except the root) has exactly one parent node and may have zero, one, or two child nodes.</li>
+          <li><strong>Depth and Height:</strong> The depth of a node is the number of edges from the root node to that node. The height of a tree is the maximum depth of any node in the tree.</li>
+          <li><strong>Types of Binary Trees:</strong> 
+            <ul>
+              <li><strong>Full Binary Tree:</strong> A binary tree in which every node other than the leaves has two children.</li>
+              <li><strong>Complete Binary Tree:</strong> A binary tree in which every level, except possibly the last, is completely filled, and all nodes are as far left as possible.</li>
+              <li><strong>Perfect Binary Tree:</strong> A binary tree in which all interior nodes have two children, and all leaves have the same depth or same level.</li>
+              <li><strong>Balanced Binary Tree:</strong> A binary tree in which the depth of the left and right subtrees of every node differ by at most one.</li>
+            </ul>
+          </li>
+          <li><strong>Traversals:</strong> Binary trees can be traversed in different orders:
+            <ul>
+              <li><strong>Inorder:</strong> Visit the left subtree, then the root, then the right subtree.</li>
+              <li><strong>Preorder:</strong> Visit the root, then the left subtree, then the right subtree.</li>
+              <li><strong>Postorder:</strong> Visit the left subtree, then the right subtree, then the root.</li>
+            </ul>
+          </li>
+        </ul>
+        <img src="binary tree.png" alt="Binary Tree Example">
+      </div>
+      <div class="tree-type">
+        <h3>Binary Search Tree (BST)</h3>
+        <p>A binary search tree is a binary tree in which the value of each node's left child is less than the value of the node, and the value of each node's right child is greater than the value of the node.</p>
+        <!-- <img src="bst-example.png" alt="BST Example"> -->
+        <h4>Key Characteristics:</h4>
+        <ul>
+          <li><strong>Ordered Structure:</strong> Maintains a specific order of elements where the left subtree contains elements less than the root, and the right subtree contains elements greater than the root.</li>
+          <li><strong>Efficient Search:</strong> Provides efficient searching capabilities with a time complexity of O(log n) for average case scenarios.</li>
+          <li><strong>Dynamic Operations:</strong> Supports dynamic operations like insertion, deletion, and search, making it suitable for various applications.</li>
+          <li><strong>Applications:</strong> Widely used in applications requiring fast search operations, such as in database indexing, symbol tables, and autocomplete functionalities.</li>
+        </ul>
+      </div>
+      
+      <div class="tree-type">
+        <h3>AVL Tree</h3>
+        <p>An AVL tree is a self-balancing binary search tree in which the heights of the two child subtrees of any node differ by at most one.</p>
+        <!-- <img src="avl_tree.png" alt="AVL Tree Example"> -->
+        <h4>Key Characteristics:</h4>
+        <ul>
+          <li><strong>Self-Balancing:</strong> Automatically maintains balance after insertion and deletion operations to ensure logarithmic time complexity for search, insertion, and deletion.</li>
+          <li><strong>Rotations:</strong> Utilizes rotations (single and double) to balance the tree when necessary.</li>
+          <li><strong>Efficient Operations:</strong> Maintains height balance to keep the depth of the tree minimal, leading to efficient operations.</li>
+          <li><strong>Applications:</strong> Used in applications requiring faster search, insertion, and deletion than ordinary binary search trees, such as in database systems and language compilers.</li>
+        </ul>
+        <h4>Algorithm:</h4>
+        <p>The AVL tree performs rotations to maintain its balance during insertion and deletion. The two main types of rotations are:</p>
+        <ul>
+          <li><strong>Single Rotation:</strong> Performs a single rotation (left or right) to balance the tree.</li>
+          <li><strong>Double Rotation:</strong> Performs two rotations (left-right or right-left) to balance the tree.</li>
+        </ul>
+        <h4>Complexity Analysis:</h4>
+        <p>AVL trees guarantee logarithmic time complexity for basic operations such as search, insertion, and deletion, making them efficient for use in various applications.</p>
+      </div>
+      
+
+      <!-- Add more types of trees as needed -->
+    </section>
+
+    <section id="tree-operations">
+      <h2>Operations on Trees</h2>
+      <ul>
+        <li><strong>Insertion:</strong> Adding a new node to the tree.</li>
+        <li><strong>Deletion:</strong> Removing a node from the tree.</li>
+        <li><strong>Traversal:</strong> Visiting all nodes in a specific order.</li>
+        <li><strong>Search:</strong> Finding a specific node in the tree.</li>
+        <li><strong>Height Calculation:</strong> Determining the height of the tree.</li>
+        <!-- Add more operations as needed -->
+      </ul>
+    </section>
+
+    <section id="tree-applications">
+      <h2>Applications of Trees</h2>
+      <ul>
+        <li><strong>Binary Search Trees (BSTs):</strong> Used for searching, insertion, and deletion operations efficiently.</li>
+        <li><strong>Expression Trees:</strong> Used to represent mathematical expressions for evaluation.</li>
+        <li><strong>Decision Trees:</strong> Used in decision analysis and machine learning algorithms.</li>
+        <li><strong>Trie:</strong> Used for efficient searching of strings and prefix matching.</li>
+        <li><strong>Heap:</strong> Used for implementing priority queues and heap sort.</li>
+        <!-- Add more applications as needed -->
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>© Your Website Name. All rights reserved.</p>
+  </footer>
+</body>
+</html>

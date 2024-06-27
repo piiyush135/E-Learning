@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Programming - Syntax and Variables</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Basic styling for demonstration */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #f0f0f0, #d3d3d3);
+            color: #333;
+        }
+
+        header {
+            background: #67e085;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 30px;
+            position: relative;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 36px;
+            color: #0f0808;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .back-button {
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: white;
+            text-decoration: none;
+            padding: 5px 10px;
+            border: 1px solid white;
+            border-radius: 5px;
+            transition: background-color 0.3s, border-color 0.3s;
+            font-size: 0.8em;
+        }
+
+        .back-button:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            border-color: rgba(255, 255, 255, 0.5);
+        }
+
+        main {
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        section {
+            margin-bottom: 50px;
+        }
+
+        h2 {
+            color: #04af2f;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        a {
+            color: #6c5ce7;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #4b3cb3;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        iframe {
+            width: 100%;
+            height: 415px;
+        }
+
+        .credit {
+            font-size: 14px;
+            color: #666;
+            margin-top: 10px;
+        }
+
+        .additional-info {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .info-title {
+            color: #333;
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+
+        .info-content {
+            color: #666;
+        }
+
+        .info-content ul {
+            padding-left: 20px;
+        }
+
+        footer {
+            background-color: #0f0808;
+            padding: 20px;
+            text-align: center;
+            color: white;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Java Programming - Syntax and Variables</h1>
+        <a href="java.html" class="back-button">Back</a>
+    </header>
+
+    <main>
+        <section>
+            <h2>Syntax and Variables in Java</h2>
+            <p>Java is a powerful programming language used for developing a wide range of applications, from mobile apps to large-scale enterprise systems. Understanding the syntax and variables in Java is essential for writing clean and efficient code.</p>
+            <p>In this section, we'll cover the basic syntax of Java and how to declare and use variables.</p>
+        </section>
+
+        <section id="syntax">
+            <h2>Java Syntax</h2>
+            <p>Java syntax refers to the rules and conventions used to write Java code. Here are some key points:</p>
+            <ul>
+                <li><strong>Declaration of Classes:</strong> Java programs are organized into classes, which contain methods and variables.</li>
+                <li><strong>Curly Braces:</strong> Curly braces ({}) are used to define blocks of code, such as methods and classes.</li>
+                <li><strong>Semicolons:</strong> Semicolons (;) are used to terminate statements in Java.</li>
+                <li><strong>Comments:</strong> Java supports single-line (//) and multi-line (/* */) comments to add explanations and documentation to the code.</li>
+            </ul>
+        </section>
+
+        <section id="variables">
+            <h2>Variables</h2>
+            <p>Variables are used to store data in a Java program. Each variable has a data type and a name. Here are some common data types in Java:</p>
+            <ul>
+                <li><strong>int:</strong> Used to store integer values (e.g., 10, -5).</li>
+                <li><strong>double:</strong> Used to store floating-point values (e.g., 3.14, -0.5).</li>
+                <li><strong>char:</strong> Used to store single characters (e.g., 'A', 'x').</li>
+                <li><strong>boolean:</strong> Used to store true or false values.</li>
+            </ul>
+            <p>Variables must be declared before they can be used. Here's the syntax for declaring a variable:</p>
+            <pre>
+                <code>
+                    // Syntax: dataType variableName;
+                    int age;
+                    double salary;
+                    char grade;
+                    boolean isStudent;
+                </code>
+            </pre>
+            <p>After declaring a variable, you can assign a value to it using the assignment operator (=). For example:</p>
+            <pre>
+                <code>
+                    // Assigning values to variables
+                    age = 25;
+                    salary = 30000.50;
+                    grade = 'A';
+                    isStudent = true;
+                </code>
+            </pre>
+        </section>
+    </main>
+
+    <footer>
+        <p>© College Sahayata. All rights reserved.</p>
+    </footer>
+</body>
+</html>
