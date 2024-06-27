@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stacks Webpage</title>
+  <link rel="stylesheet" href="stack.css">
+</head>
+
+<body>
+  <header>
+    <h1>Exploring Stacks</h1>
+    <a href="dsa.html" class="back-button">Back</a>
+    <!-- <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="array.html">Arrays</a></li>
+        <li><a href="linked_list.html">Linked List</a></li>
+      </ul>
+    </nav> -->
+  </header>
+
+  <main>
+    <section>
+      <h2>Introduction to Stacks</h2>
+      <p>A stack is a linear data structure that follows the Last In, First Out (LIFO) principle. In a stack, elements
+        are inserted and removed from the same end called the top. Stacks are widely used in computer science for
+        various applications such as expression evaluation, function call management, and backtracking.</p>
+    </section>
+
+    <section>
+      <h2>Operations on Stacks</h2>
+      <ul>
+        <li>Push: Adds an element to the top of the stack.</li>
+        <li>Pop: Removes and returns the top element from the stack.</li>
+        <li>Peek or Top: Returns the top element of the stack without removing it.</li>
+        <li>isEmpty: Checks if the stack is empty.</li>
+        <li>Size: Returns the number of elements in the stack.</li>
+      </ul>
+    </section>
+    <section>
+        <h2>Basic Operations on Stack</h2>
+        <p>In order to manipulate a stack, certain operations are provided:</p>
+        <ul>
+          <li><strong>push():</strong> Inserts an element into the stack.</li>
+          <li><strong>pop():</strong> Removes an element from the stack.</li>
+          <li><strong>top():</strong> Returns the top element of the stack.</li>
+          <li><strong>isEmpty():</strong> Returns true if the stack is empty, else false.</li>
+          <li><strong>size():</strong> Returns the size of the stack.</li>
+        </ul>
+      </section>
+      
+      <section>
+        <img src="Stack-push.png" alt="push">
+        <h2>Stack Operations</h2>
+        <div class="operation">
+          <h3>Push:</h3>
+          <p>Adds an item to the stack. If the stack is full, it's considered an Overflow condition.</p>
+          <pre><code>Algorithm for push:
+      begin
+       if stack is full
+          return
+       endif
+      else  
+       increment top
+       stack[top] assign value
+      end else
+      end procedure</code></pre>
+        </div>
+      
+        <div class="operation">
+          <h3>Pop:</h3>
+          <p>Removes an item from the stack. If the stack is empty, it's considered an Underflow condition.</p>
+          <pre><code>Algorithm for pop:
+      begin
+       if stack is empty
+          return
+       endif
+      else
+       store value of stack[top]
+       decrement top
+       return value
+      end else
+      end procedure</code></pre>
+        </div>
+      
+        <div class="operation">
+          <h3>Top:</h3>
+          <p>Returns the top element of the stack.</p>
+          <pre><code>Algorithm for Top:
+      begin 
+        return stack[top]
+      end procedure</code></pre>
+        </div>
+      
+        <div class="operation">
+          <h3>isEmpty:</h3>
+          <p>Returns true if the stack is empty, else false.</p>
+          <pre><code>Algorithm for isEmpty:
+      begin
+       if top &lt; 1
+          return true
+       else
+          return false
+      end procedure</code></pre>
+        </div>
+      </section>
+
+    <section>
+      <h2>Applications of Stacks</h2>
+      <ol>
+        <li>Expression Evaluation: Stacks are used to evaluate arithmetic expressions, such as infix, postfix, and
+          prefix notations.</li>
+        <li>Function Call Management: Stacks are used to manage function calls and store local variables and return
+          addresses.</li>
+        <li>Backtracking: Stacks are used in algorithms like depth-first search (DFS) for backtracking.</li>
+        <li>Memory Management: Stacks are used to manage memory allocation and deallocation in programs.</li>
+        <li>Undo Mechanism: Stacks are used in applications to implement an undo mechanism by storing the previous
+          states.</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Implementation of Stacks</h2>
+      <p>Stacks can be implemented using various programming languages such as C, C++, Java, Python, and others. Below
+        is a simple example of stack implementation using Python:</p>
+      <pre><code class="python">class Stack:
+    def __init__(self):
+        self.items = []
+
+    def push(self, item):
+        self.items.append(item)
+
+    def pop(self):
+        return self.items.pop()
+
+    def peek(self):
+        return self.items[-1]
+
+    def is_empty(self):
+        return len(self.items) == 0
+
+    def size(self):
+        return len(self.items)
+
+# Example usage:
+stack = Stack()
+for i in range(10):
+    stack.push(i)
+print("Stack size:", stack.size())
+print("Top element:", stack.peek())
+print("Popped elements:")
+while not stack.is_empty():
+    print(stack.pop())
+print("Stack size after pop:", stack.size())</code></pre>
+    </section>
+
+    <section>
+      <h2>Complexity Analysis</h2>
+      <p>The time complexity of various stack operations depends on the underlying data structure used for
+        implementation. In most cases, the time complexity of push, pop, peek, isEmpty, and size operations is O(1)
+        (constant time) for stacks implemented using arrays or linked lists.</p>
+    </section>
+
+    <section>
+      <h2>Challenges</h2>
+      <p>While stacks are versatile data structures, they also come with their own set of challenges. Some common
+        challenges associated with stacks include:</p>
+      <ol>
+        <li>Managing stack overflow and underflow conditions.</li>
+        <li>Implementing stack-based algorithms efficiently.</li>
+        <li>Dealing with nested function calls and recursion.</li>
+        <li>Choosing the appropriate data structure for stack implementation based on application requirements.</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Conclusion</h2>
+      <p>Stacks are fundamental data structures with numerous applications in computer science and software development.
+        Understanding how stacks work and their various operations is essential for building efficient algorithms and
+        systems.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2024 Stackify. All rights reserved.</p>
+  </footer>
+</body>
+
+</html>

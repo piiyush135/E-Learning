@@ -1,0 +1,167 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online JavaScript Code Editor</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.1/codemirror.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.1/theme/dracula.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+            background: linear-gradient(to bottom right, #25d8d8, #0c5348);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        textarea {
+            width: 100%;
+            height: 400px;
+            padding: 10px;
+            margin: 10px 0;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            resize: none;
+            transition: border-color 0.3s ease;
+            font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+            font-size: 14px;
+        }
+
+        textarea:focus {
+            border-color: #007bff;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #output {
+            width: 100%;
+            margin: 20px 0;
+            padding: 10px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            background-color: #41b3dd;
+            overflow: auto;
+            font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+            font-size: 14px;
+            color: rgb(8, 8, 8);
+        }
+
+        .CodeMirror-hints {
+            z-index: 999;
+            position: absolute;
+            background: #f8f8f8;
+            border: 1px solid #ddd;
+            font-size: 90%;
+            overflow-y: auto;
+            max-height: 20em;
+        }
+
+        .CodeMirror-hint {
+            margin: 0;
+            padding: 2px 6px;
+            cursor: pointer;
+        }
+
+        .CodeMirror-hint-active {
+            background: #d0e4f6;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Online JavaScript Code Editor</h1>
+        <textarea id="code" name="code">console.log('Hello, world!'); 2 + 2;</textarea>
+        <button onclick="runCode()">Run Code</button>
+        <h1>OUTPUT</h1>
+        <div id="output" contenteditable="true" spellcheck="false"></div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.1/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.1/mode/javascript/javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.36.0/autocomplete.min.js"></script>
+
+    <script>
+        var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+            lineNumbers: true,
+            mode: "javascript",
+            theme: "dracula",
+            extraKeys: {
+                "Ctrl-Space": "autocomplete" // Enable autocomplete on Ctrl+Space
+            }
+        });
+
+        function runCode() {
+            var code = editor.getValue();
+            var outputContainer = document.getElementById('output');
+            outputContainer.innerHTML = ''; // Clear previous content
+
+            // Override console.log to capture its output
+            var consoleOutput = '';
+            var originalLog = console.log;
+            console.log = function(message) {
+                consoleOutput += message + '<br>';
+            };
+
+            // Split the code into statements
+            var statements = code.split(';');
+
+            // Execute each statement and append the result to the output container
+            statements.forEach(function(statement) {
+                try {
+                    // Execute the JavaScript code
+                    var result = eval(statement);
+                    // Append the result to the output container
+                    if (result !== undefined) {
+                        outputContainer.innerHTML += result + '<br>';
+                    }
+                } catch (error) {
+                    // If there's an error, display it in the output
+                    outputContainer.innerHTML += 'Error: ' + error.message + '<br>';
+                }
+            });
+
+            // Restore the original console.log function
+            console.log = originalLog;
+
+            // Append the captured console output to the output container
+            outputContainer.innerHTML += consoleOutput;
+        }
+    </script>
+
+</body>
+
+</html>

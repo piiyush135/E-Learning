@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C++ Programming</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Basic styling for demonstration */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #f0f0f0, #d3d3d3);
+            color: #333;
+        }
+
+        header {
+            background: #67e085;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 30px;
+            position: relative;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 36px;
+            color: #0f0808;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .back-button {
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: white;
+            text-decoration: none;
+            padding: 5px 10px;
+            border: 1px solid white;
+            border-radius: 5px;
+            transition: background-color 0.3s, border-color 0.3s;
+            font-size: 0.8em;
+        }
+
+        .back-button:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            border-color: rgba(255, 255, 255, 0.5);
+        }
+
+        main {
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        section {
+            margin-bottom: 50px;
+        }
+
+        h2 {
+            color: #04af2f;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        a {
+            color: #6c5ce7;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #4b3cb3;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        iframe {
+            width: 100%;
+            height: 415px;
+        }
+
+        .credit {
+            font-size: 14px;
+            color: #666;
+            margin-top: 10px;
+        }
+
+        .additional-info {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .info-title {
+            color: #333;
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+
+        .info-content {
+            color: #666;
+        }
+
+        .info-content ul {
+            padding-left: 20px;
+        }
+
+        footer {
+            background-color: #0f0808;
+            padding: 20px;
+            text-align: center;
+            color: white;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>C++ Programming</h1>
+        <a href="main.html" class="back-button">Back</a>
+    </header>
+
+    <main>
+        <section>
+            <h2>Introduction to C++</h2>
+            <p>C++ is a middle-level programming language developed by Bjarne Stroustrup starting in 1979 at Bell Labs. C++ runs on a variety of platforms, such as Windows, Mac OS, and the various versions of UNIX. This C++ tutorial adopts a simple 
+                and practical approach to describe the concepts of C++ for beginners to advanded software engineers.</p>
+            <p>In this section, you'll learn about the basics of C++ programming.</p>
+        </section>
+
+        <section>
+            <h2>C++ Basics</h2>
+            <ul>
+                <li><a href="c++ syntax.html">Syntax</a></li>
+                <li>Functions</a></li>
+                <li>Control Structures</a></li>
+                <li>Classes and Objects</a></li>
+                <li>Pointers and References</a></li>
+                <li>Standard Template Library (STL)</a></li>
+            </ul>
+            <p>Understanding the basics of Python is essential for writing clean and efficient code. These topics lay the
+                foundation for more advanced Python programming.</p>
+        </section>
+        <section>
+            <h2>Key Points about CSS:</h2>
+            <ul>
+                <li>General-purpose: C++ is a general-purpose programming language designed for system programming, application software, device drivers, embedded software, games development, and more.</li>
+
+                <li>Compiled language: C++ code is compiled into machine code, making it efficient and fast in execution.</li>
+                <li>Object-oriented: C++ supports object-oriented programming paradigms such as classes, objects, inheritance, encapsulation, and polymorphism. This allows for modular and reusable code.</li>
+                <li>Strongly typed: C++ is a strongly typed language, meaning that variables must be declared with a specific data type before they can be used.</li>
+                <li>Static typing: C++ uses static typing, where data types are checked at compile time rather than runtime, which can lead to better performance and early error detection.</li>
+                <li>Standard Template Library (STL): C++ includes a rich standard library, known as the Standard Template Library (STL), which provides classes and functions for various operations such as containers (like vectors, lists, maps), algorithms (sorting, searching), and utilities.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Hello World using C++</h2>
+            <ul>
+                <li>Template Metaprogramming: C++ supports template metaprogramming, which allows for writing code that operates on types rather than values at compile time. This powerful technique enables the creation of highly efficient and flexible code.</a></li>
+                <li>Concurrency Support: C++ provides support for concurrent programming through features like threads, mutexes, condition variables, and atomic operations. With the Standard Library's threading support, developers can create multithreaded applications to leverage modern multicore processors effectively.</a></li>
+                <li>STL Algorithms and Data Structures: The Standard Template Library (STL) in C++ provides a rich collection of algorithms and data structures. Using STL containers and algorithms, developers can write efficient and concise code for various tasks like sorting, searching, and manipulation of data structures.</a></li>
+                <li>RAII (Resource Acquisition Is Initialization): RAII is an idiom in C++ that ties the lifespan of a resource (like memory or file handles) to the lifespan of an object. By using RAII, resource management becomes automatic and exception-safe, leading to cleaner and more robust code.</a></li>
+                <li>Smart Pointers: C++11 introduced smart pointers like std::unique_ptr, std::shared_ptr, and std::weak_ptr, which provide automatic memory management with ownership semantics. Smart pointers help prevent memory leaks and manage resources more effectively than raw pointers.</li>
+            </ul>
+            <p>Once you've mastered the basics, dive into advanced topics to take your C++ skills to the next level.
+            </p>
+        </section>
+
+        <section>
+            <h2>Video Tutorial: C++ Programming for Beginners</h2>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/yGB9jhsEsr8?si=jaONdYpNIvrLeMkB" title="YouTube video player"
+                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            <p class="credit">Video by <a href="https://www.youtube.com/channel/CodeWithHarry">CodeWithHarry</a></p>
+        </section>
+
+        <section class="additional-info">
+            <h2 class="info-title">Practice Problems</h2>
+            <div class="info-content">
+                <p>Test your C++ skills with these practice problems:</p>
+                <ul>
+                    <li><a href="https://www.codewars.com/">Codewars</a></li>
+                    <li><a href="https://www.leetcode.com/">LeetCode</a></li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© College Sahayata. All rights reserved.</p>
+    </footer>
+</body>
+</html>

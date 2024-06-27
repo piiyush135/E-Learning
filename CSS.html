@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS - Cascading Style Sheets</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Basic styling for demonstration */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #f0f0f0, #d3d3d3);
+            color: #333;
+        }
+
+        header {
+            background: #67e085;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 30px;
+            position: relative;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 36px;
+            color: #0f0808;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .back-button {
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: white;
+            text-decoration: none;
+            padding: 5px 10px;
+            border: 1px solid white;
+            border-radius: 5px;
+            transition: background-color 0.3s, border-color 0.3s;
+            font-size: 0.8em;
+        }
+
+        .back-button:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            border-color: rgba(255, 255, 255, 0.5);
+        }
+
+        main {
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        section {
+            margin-bottom: 50px;
+        }
+
+        h2 {
+            color: #04af2f;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        a {
+            color: #6c5ce7;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #4b3cb3;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        iframe {
+            width: 100%;
+            height: 555px;
+        }
+
+        .credit {
+            font-size: 14px;
+            color: #666;
+            margin-top: 10px;
+        }
+
+        .try-yourself {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        .try-yourself h3 {
+            color: #333;
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+
+        .try-yourself textarea {
+            width: 100%;
+            height: 200px;
+            margin-bottom: 15px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            resize: vertical;
+        }
+
+        .try-yourself button {
+            background-color: #6c5ce7;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .try-yourself button:hover {
+            background-color: #4b3cb3;
+        }
+
+        footer {
+            background-color: #0f0808;
+            padding: 20px;
+            text-align: center;
+            color: white;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>CSS - Cascading Style Sheets</h1>
+        <a href="main.html" class="back-button">Back</a>
+    </header>
+
+    <main>
+        <section>
+            <h2>What is CSS?</h2>
+            <p>CSS (Cascading Style Sheets) is a stylesheet language used to describe the presentation of a document
+                written in HTML. It defines how HTML elements should be displayed on a screen, in print, or in other
+                media.</p>
+            <p>CSS describes the style of an HTML document, specifying colors, fonts, margins, padding, and other visual
+                properties. It allows web designers to control the appearance and layout of multiple web pages at once.
+            </p>
+            <p>CSS describes how HTML elements are to be displayed on screen, paper, or in other media</p>
+        </section>
+
+        <section>
+            <h2>Key Points about CSS:</h2>
+            <ul>
+                <li>CSS stands for Cascading Style Sheets.</li>
+                <li>It describes how HTML elements are to be displayed on the screen, paper, or in other media.</li>
+                <li>It can control the layout of multiple web pages all at once.</li>
+                <li>CSS saves a lot of work. It can control the layout of multiple web pages all at once.</li>
+                <li>External stylesheets are stored in CSS files.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Detailed Overview of CSS</h2>
+            <p>CSS consists of a selector and a declaration block. The selector points to the HTML element you want to
+                style, while the declaration block contains one or more declarations separated by semicolons.</p>
+            <pre>
+                <code>
+                    selector {
+                        property1: value1;
+                        property2: value2;
+                        /* Add more properties as needed */
+                    }
+                </code>
+            </pre>
+            <p>For example:</p>
+            <pre>
+                <code>
+                    h1 {
+                        color: blue;
+                        font-size: 24px;
+                    }
+
+                    .container {
+                        width: 80%;
+                        margin: 0 auto;
+                    }
+                </code>
+            </pre>
+        </section>
+        <section>
+            <h3>CSS Syntax</h3>
+            <img src="img_selector.gif" alt="">
+        </section>
+
+        <section class="try-yourself">
+            <h3>Try it Yourself!</h3>
+            <p>Write some CSS code in the textarea below and see the changes.</p>
+            <textarea id="css-code" placeholder="Write your CSS code here..."></textarea>
+            <button onclick="applyCSS()">Apply CSS</button>
+        </section>
+        <section>
+            <h2>Video Tutorial: CSS for Beginners</h2>
+            <iframe width="560" height="515" src="https://www.youtube.com/embed/ESnrn1kAD4E?si=Nk8ye3hDRGL_kPDz"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <p class="credit">Video by <a href="https://youtu.be/UmnCZ7-9yDY?si=LhCnbCP4QAEVDiLF">Apna College</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© College Sahayata. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function applyCSS() {
+            var cssCode = document.getElementById('css-code').value;
+            var style = document.createElement('style');
+            style.innerHTML = cssCode;
+            document.head.appendChild(style);
+        }
+    </script>
+</body>
+
+</html>

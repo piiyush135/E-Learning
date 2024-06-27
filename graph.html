@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Graph Data Structure</title>
+  <link rel="stylesheet" href="graph.css">
+</head>
+<body>
+  <header>
+    <h1>Exploring Graphs</h1>
+    <a href="dsa.html" class="back-button">Back</a>
+  </header>
+
+  <main>
+    <section id="graph-introduction">
+        <h2>Introduction to Graphs</h2>
+        <p>A graph is a mathematical structure consisting of vertices (also called nodes or points) and edges (also called links or lines) that connect pairs of vertices. Graphs are used to represent relationships between objects.</p>
+        <p>Here are some key concepts related to graphs:</p>
+        <ul>
+          <li><strong>Vertices (Nodes):</strong> These are the entities in the graph, represented as points.</li>
+          <li><strong>Edges (Links):</strong> These are the connections between vertices, represented as lines or arcs.</li>
+          <li><strong>Directed Graph:</strong> A graph in which the edges have a direction associated with them, indicating a one-way relationship between vertices.</li>
+          <li><strong>Undirected Graph:</strong> A graph in which the edges do not have a direction associated with them, indicating a two-way relationship between vertices.</li>
+          <li><strong>Weighted Graph:</strong> A graph in which each edge has a numerical value associated with it, called a weight, representing some kind of cost or distance.</li>
+          <li><strong>Adjacency:</strong> Two vertices are said to be adjacent if there is an edge connecting them.</li>
+          <li><strong>Degree:</strong> The degree of a vertex is the number of edges incident to it.</li>
+        </ul>
+        <p>Graphs are widely used in computer science, mathematics, and various other fields to model various real-world scenarios such as social networks, transportation networks, computer networks, and more. They have a wide range of applications in algorithms, data structures, optimization, and network analysis.</p>
+        <img src="graphs-in-data-structure.avif" alt="Graph Diagram">
+      </section>
+      
+
+    <section id="graph-types">
+      <h2>Types of Graphs</h2>
+      <div class="graph-type">
+        <h3>Undirected Graph</h3>
+        <p>An undirected graph is a graph in which edges have no direction. That is, the edge (u, v) is identical to the edge (v, u).</p>
+        <img src="undirected graph.png" alt="Undirected Graph Example">
+      </div>
+
+      <div class="graph-type">
+        <h3>Directed Graph (Digraph)</h3>
+        <p>A directed graph is a graph in which edges have a direction. That is, the edge (u, v) is different from the edge (v, u).</p>
+        <img src="directed graph.png" alt="Directed Graph Example">
+      </div>
+
+      <!-- Add more types of graphs as needed -->
+    </section>
+
+    <section id="graph-representations">
+      <h2>Representations of Graphs</h2>
+      <ul>
+        <li><strong>Adjacency Matrix:</strong> A two-dimensional array where the value at index (i, j) represents whether there is an edge between vertices i and j.</li>
+        <li><strong>Adjacency List:</strong> A collection of lists where each list represents the vertices adjacent to a particular vertex.</li>
+        <!-- Add more representations as needed -->
+      </ul>
+    </section>
+
+    <section id="graph-traversal">
+      <h2>Graph Traversal</h2>
+      <ul>
+        <li><strong>Breadth-First Search (BFS):</strong> Explores all the vertices in a graph level by level.</li>
+        <li><strong>Depth-First Search (DFS):</strong> Explores as far as possible along each branch before backtracking.</li>
+        <!-- Add more traversal algorithms as needed -->
+      </ul>
+    </section>
+
+    <section id="graph-algorithms">
+      <h2>Graph Algorithms</h2>
+      <ul>
+        <li><strong>Shortest Path Algorithms:</strong> Algorithms to find the shortest path between two vertices in a graph, such as Dijkstra's algorithm and Bellman-Ford algorithm.</li>
+        <li><strong>Minimum Spanning Tree (MST) Algorithms:</strong> Algorithms to find a subset of edges that forms a tree that includes every vertex, where the total weight of all edges in the tree is minimized, such as Prim's algorithm and Kruskal's algorithm.</li>
+        <!-- Add more graph algorithms as needed -->
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>© college Sahayata. All rights reserved.</p>
+  </footer>
+</body>
+</html>

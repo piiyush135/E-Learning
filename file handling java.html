@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Programming - File Handling</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Basic styling for demonstration */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #f0f0f0, #d3d3d3);
+            color: #333;
+        }
+
+        header {
+            background: #67e085;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 30px;
+            position: relative;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 36px;
+            color: #0f0808;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .back-button {
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: white;
+            text-decoration: none;
+            padding: 5px 10px;
+            border: 1px solid white;
+            border-radius: 5px;
+            transition: background-color 0.3s, border-color 0.3s;
+            font-size: 0.8em;
+        }
+
+        .back-button:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            border-color: rgba(255, 255, 255, 0.5);
+        }
+
+        main {
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        section {
+            margin-bottom: 50px;
+        }
+
+        h2 {
+            color: #04af2f;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        a {
+            color: #6c5ce7;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #4b3cb3;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        iframe {
+            width: 100%;
+            height: 415px;
+        }
+
+        .credit {
+            font-size: 14px;
+            color: #666;
+            margin-top: 10px;
+        }
+
+        .additional-info {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .info-title {
+            color: #333;
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+
+        .info-content {
+            color: #666;
+        }
+
+        .info-content ul {
+            padding-left: 20px;
+        }
+
+        footer {
+            background-color: #0f0808;
+            padding: 20px;
+            text-align: center;
+            color: white;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Java Programming - File Handling</h1>
+        <a href="java.html" class="back-button">Back</a>
+    </header>
+
+    <main>
+        <section>
+            <h2>File Handling in Java</h2>
+            <p>File handling in Java allows you to work with files stored on your system. It enables you to read data from files, write data to files, and perform various operations such as creating, deleting, and modifying files.</p>
+        </section>
+
+        <section>
+            <h2>Reading from Files</h2>
+            <p>In Java, you can read from files using classes like <code>FileReader</code> and <code>BufferedReader</code>. Here's an example:</p>
+            <pre>
+                <code>
+                    import java.io.BufferedReader;
+                    import java.io.FileReader;
+                    import java.io.IOException;
+
+                    public class ReadFile {
+                        public static void main(String[] args) {
+                            try {
+                                BufferedReader reader = new BufferedReader(new FileReader("example.txt"));
+                                String line = reader.readLine();
+                                while (line != null) {
+                                    System.out.println(line);
+                                    line = reader.readLine();
+                                }
+                                reader.close();
+                            } catch (IOException e) {
+                                System.err.println("Error reading file: " + e.getMessage());
+                            }
+                        }
+                    }
+                </code>
+            </pre>
+        </section>
+
+        <section>
+            <h2>Writing to Files</h2>
+            <p>You can write to files in Java using classes like <code>FileWriter</code> and <code>BufferedWriter</code>. Here's an example:</p>
+            <pre>
+                <code>
+                    import java.io.BufferedWriter;
+                    import java.io.FileWriter;
+                    import java.io.IOException;
+
+                    public class WriteFile {
+                        public static void main(String[] args) {
+                            try {
+                                BufferedWriter writer = new BufferedWriter(new FileWriter("output.txt"));
+                                writer.write("Hello, world!");
+                                writer.close();
+                            } catch (IOException e) {
+                                System.err.println("Error writing to file: " + e.getMessage());
+                            }
+                        }
+                    }
+                </code>
+            </pre>
+        </section>
+    </main>
+
+    <footer>
+        <p>© College Sahayata. All rights reserved.</p>
+    </footer>
+</body>
+</html>

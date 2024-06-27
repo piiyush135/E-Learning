@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Basics: Data Types</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* General styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        header {
+            background-color: #67e085;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .back-button {
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: white;
+            text-decoration: none;
+            padding: 5px 10px;
+            border: 1px solid white;
+            border-radius: 5px;
+            transition: background-color 0.3s, border-color 0.3s;
+            font-size: 0.8em;
+        }
+
+        .back-button:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            border-color: rgba(255, 255, 255, 0.5);
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        section {
+            margin-bottom: 30px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #6c5ce7;
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        footer {
+            background-color: #0f0808;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Python Basics: Data Types</h1>
+        <a href="main.html" class="back-button">Back</a>
+    </header>
+
+    <main>
+        <section>
+            <h2>Numeric Types</h2>
+            <p>Python supports several numeric types, including integers, floating-point numbers, and complex numbers. These types are used to represent different kinds of numerical data.</p>
+            <p>Integers are whole numbers without any decimal points. They can be positive or negative. Example: 5, -10, 100.</p>
+            <p>Floating-point numbers are numbers with a decimal point or an exponent notation. They can represent both integer and fractional parts. Example: 3.14, -0.001, 2.0e-5.</p>
+            <p>Complex numbers have a real and imaginary part. They are written in the form a + bj, where a is the real part and b is the imaginary part. Example: 3 + 4j, -2 - 5j.</p>
+        </section>
+
+        <section>
+            <h2>String Type</h2>
+            <p>Strings are sequences of characters, enclosed within single or double quotes. Python provides several methods for working with strings, such as concatenation, slicing, and formatting.</p>
+            <p>Strings in Python are immutable, meaning they cannot be changed after they are created. However, you can create new strings from existing ones. Example: 'hello', "world", 'Python'.</p>
+            <p>String literals can span multiple lines using triple quotes. Example:</p>
+            <pre>
+                '''This is a
+                multi-line
+                string'''
+            </pre>
+        </section>
+
+        <section>
+            <h2>Boolean Type</h2>
+            <p>Boolean values represent truth values, either True or False. They are used in logical operations, comparisons, and control flow statements.</p>
+            <p>Python supports boolean operations such as AND, OR, and NOT, as well as comparison operators like ==, !=, <, >, <=, and >=.</p>
+            <p>Boolean values are the result of comparison operations. Example: 5 == 5 (True), 10 < 5 (False).</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© College Sahayata. All rights reserved.</p>
+    </footer>
+</body>
+</html>

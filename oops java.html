@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Programming - Object-Oriented Programming (OOP)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Basic styling for demonstration */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #f0f0f0, #d3d3d3);
+            color: #333;
+        }
+
+        header {
+            background: #67e085;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 30px;
+            position: relative;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 36px;
+            color: #0f0808;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .back-button {
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: white;
+            text-decoration: none;
+            padding: 5px 10px;
+            border: 1px solid white;
+            border-radius: 5px;
+            transition: background-color 0.3s, border-color 0.3s;
+            font-size: 0.8em;
+        }
+
+        .back-button:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            border-color: rgba(255, 255, 255, 0.5);
+        }
+
+        main {
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        section {
+            margin-bottom: 50px;
+        }
+
+        h2 {
+            color: #04af2f;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        a {
+            color: #6c5ce7;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #4b3cb3;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        iframe {
+            width: 100%;
+            height: 415px;
+        }
+
+        .credit {
+            font-size: 14px;
+            color: #666;
+            margin-top: 10px;
+        }
+
+        .additional-info {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .info-title {
+            color: #333;
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+
+        .info-content {
+            color: #666;
+        }
+
+        .info-content ul {
+            padding-left: 20px;
+        }
+
+        footer {
+            background-color: #0f0808;
+            padding: 20px;
+            text-align: center;
+            color: white;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Java Programming - Object-Oriented Programming (OOP)</h1>
+        <a href="java.html" class="back-button">Back</a>
+    </header>
+
+    <main>
+        <section>
+            <h2>Object-Oriented Programming (OOP)</h2>
+            <p>Object-Oriented Programming (OOP) is a programming paradigm based on the concept of "objects," which can contain data in the form of fields (often known as attributes or properties), and code in the form of procedures (often known as methods).</p>
+            <p>OOP promotes the following key concepts:</p>
+            <ul>
+                <li><strong>Encapsulation:</strong> Bundling data and methods that operate on the data into a single unit (an object).</li>
+                <li><strong>Inheritance:</strong> Creating new classes based on existing classes (superclasses) to inherit their attributes and behaviors.</li>
+                <li><strong>Polymorphism:</strong> The ability of different objects to respond to the same message (method call) in different ways.</li>
+                <li><strong>Abstraction:</strong> Representing the essential features of an object while hiding its implementation details.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Classes and Objects</h2>
+            <p>In Java, classes are used to define the blueprint for creating objects. An object is an instance of a class, and it represents a real-world entity with attributes (fields) and behaviors (methods).</p>
+            <p>Here's a basic example of a class representing a car:</p>
+            <pre>
+                <code>
+                    public class Car {
+                        // Fields (attributes)
+                        String make;
+                        String model;
+                        int year;
+
+                        // Methods
+                        public void drive() {
+                            System.out.println("The car is driving.");
+                        }
+                    }
+                </code>
+            </pre>
+            <p>In this example, the <code>Car</code> class has three fields (<code>make</code>, <code>model</code>, and <code>year</code>) and one method (<code>drive()</code>).</p>
+        </section>
+
+        <section>
+            <h2>Creating and Using Objects</h2>
+            <p>To create an object of a class in Java, you use the <code>new</code> keyword followed by the class name, followed by parentheses. You can then access the fields and methods of the object using dot notation.</p>
+            <p>Here's how you can create an object of the <code>Car</code> class and use its methods:</p>
+            <pre>
+                <code>
+                    Car myCar = new Car();
+                    myCar.make = "Toyota";
+                    myCar.model = "Camry";
+                    myCar.year = 2022;
+
+                    myCar.drive(); // Calling the drive() method
+                </code>
+            </pre>
+            <p>This code creates a new <code>Car</code> object, sets its fields, and then calls the <code>drive()</code> method to make the car drive.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© College Sahayata. All rights reserved.</p>
+    </footer>
+</body>
+</html>

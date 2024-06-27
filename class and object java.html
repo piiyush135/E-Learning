@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Programming - Classes and Objects</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Basic styling for demonstration */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #f0f0f0, #d3d3d3);
+            color: #333;
+        }
+
+        header {
+            background: #67e085;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 30px;
+            position: relative;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 36px;
+            color: #0f0808;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .back-button {
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: white;
+            text-decoration: none;
+            padding: 5px 10px;
+            border: 1px solid white;
+            border-radius: 5px;
+            transition: background-color 0.3s, border-color 0.3s;
+            font-size: 0.8em;
+        }
+
+        .back-button:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            border-color: rgba(255, 255, 255, 0.5);
+        }
+
+        main {
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        section {
+            margin-bottom: 50px;
+        }
+
+        h2 {
+            color: #04af2f;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        a {
+            color: #6c5ce7;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #4b3cb3;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        iframe {
+            width: 100%;
+            height: 415px;
+        }
+
+        .credit {
+            font-size: 14px;
+            color: #666;
+            margin-top: 10px;
+        }
+
+        .additional-info {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .info-title {
+            color: #333;
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+
+        .info-content {
+            color: #666;
+        }
+
+        .info-content ul {
+            padding-left: 20px;
+        }
+
+        footer {
+            background-color: #0f0808;
+            padding: 20px;
+            text-align: center;
+            color: white;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Java Programming - Classes and Objects</h1>
+        <a href="java.html" class="back-button">Back</a>
+    </header>
+
+    <main>
+        <section>
+            <h2>Classes and Objects in Java</h2>
+            <p>In Java, a class is a blueprint for creating objects. It defines the properties and behaviors (methods) that objects of the class will have. An object is an instance of a class, and it represents a real-world entity.</p>
+            <p>Classes and objects are fundamental concepts in object-oriented programming (OOP), which is a programming paradigm based on the concept of "objects," which can contain data and code: data in the form of fields (often known as attributes or properties), and code in the form of procedures (often known as methods).</p>
+        </section>
+
+        <section>
+            <h2>Defining a Class in Java</h2>
+            <p>To define a class in Java, you use the <code>class</code> keyword followed by the class name. Here's a simple example:</p>
+            <pre>
+                <code>
+                    public class Car {
+                        // Fields (attributes)
+                        String make;
+                        String model;
+                        int year;
+
+                        // Methods
+                        public void drive() {
+                            System.out.println("The car is driving.");
+                        }
+                    }
+                </code>
+            </pre>
+            <p>In this example, we've defined a class named <code>Car</code> with three fields (<code>make</code>, <code>model</code>, and <code>year</code>) and one method (<code>drive()</code>).</p>
+        </section>
+
+        <section>
+            <h2>Creating Objects</h2>
+            <p>To create an object of a class in Java, you use the <code>new</code> keyword followed by the class name, followed by parentheses. Here's how you can create an object of the <code>Car</code> class:</p>
+            <pre>
+                <code>
+                    Car myCar = new Car();
+                </code>
+            </pre>
+            <p>This statement creates a new <code>Car</code> object and assigns it to the variable <code>myCar</code>. Now, <code>myCar</code> is an instance of the <code>Car</code> class, and you can access its fields and methods using dot notation.</p>
+        </section>
+
+        <section>
+            <h2>Accessing Fields and Methods</h2>
+            <p>You can access the fields and methods of an object using dot notation. Here's an example:</p>
+            <pre>
+                <code>
+                    myCar.make = "Toyota";
+                    myCar.model = "Camry";
+                    myCar.year = 2022;
+
+                    myCar.drive(); // Calling the drive() method
+                </code>
+            </pre>
+            <p>This code sets the <code>make</code>, <code>model</code>, and <code>year</code> fields of the <code>myCar</code> object and then calls the <code>drive()</code> method to make the car drive.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© College Sahayata. All rights reserved.</p>
+    </footer>
+</body>
+</html>

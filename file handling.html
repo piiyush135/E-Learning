@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Basics: File Handling</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional CSS for this specific page */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #67e085;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        section {
+            margin-bottom: 30px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #6c5ce7;
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        pre {
+            background-color: #f0f0f0;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        code {
+            font-family: 'Courier New', monospace;
+        }
+
+        footer {
+            background-color: #0f0808;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        .back-button {
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: white;
+            text-decoration: none;
+            padding: 5px 10px;
+            border: 1px solid white;
+            border-radius: 5px;
+            transition: background-color 0.3s, border-color 0.3s;
+            font-size: 0.8em;
+        }
+
+        .back-button:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            border-color: rgba(255, 255, 255, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Python Basics: File Handling</h1>
+        <a href="main.html" class="back-button">Back</a>
+    </header>
+
+    <main>
+        <section>
+            <h2>Introduction to File Handling</h2>
+            <p>File handling is an essential aspect of programming that allows you to work with files on your computer. Python provides built-in functions and methods for creating, reading, writing, and manipulating files.</p>
+            <p>Understanding file handling is crucial for tasks such as reading data from files, writing data to files, and performing file operations like copying, moving, and deleting files.</p>
+        </section>
+
+        <section>
+            <h2>Opening and Closing Files</h2>
+            <p>Before you can read from or write to a file, you need to open it. Python's <code>open()</code> function is used to open a file. It takes two arguments: the file name and the mode in which you want to open the file.</p>
+            <pre><code># Open a file in read mode
+file = open("example.txt", "r")
+
+# Perform operations on the file
+
+# Close the file
+file.close()
+</code></pre>
+            <p>It's essential to close the file after you've finished working with it to free up system resources.</p>
+        </section>
+
+        <section>
+            <h2>Reading from Files</h2>
+            <p>Python provides several methods for reading data from files:</p>
+            <ul>
+                <li><strong>read()</strong>: Reads the entire content of the file as a single string.</li>
+                <li><strong>readline()</strong>: Reads a single line from the file.</li>
+                <li><strong>readlines()</strong>: Reads all lines from the file and returns them as a list.</li>
+            </ul>
+            <pre><code># Open a file in read mode
+file = open("example.txt", "r")
+
+# Read the entire content of the file
+content = file.read()
+
+# Close the file
+file.close()
+
+print(content)
+</code></pre>
+        </section>
+
+        <section>
+            <h2>Writing to Files</h2>
+            <p>You can write data to files using Python's <code>write()</code> method or the <code>writelines()</code> method:</p>
+            <pre><code># Open a file in write mode
+file = open("example.txt", "w")
+
+# Write data to the file
+file.write("Hello, World!\n")
+file.write("This is a sample file.")
+
+# Close the file
+file.close()
+</code></pre>
+            <p>If the file does not exist, it will be created. If it already exists, its previous content will be overwritten.</p>
+        </section>
+
+        <section>
+            <h2>File Operations</h2>
+            <p>Python provides various file operations to manipulate files:</p>
+            <ul>
+                <li><strong>Copying Files</strong>: Use the <code>shutil.copy()</code> function to copy files.</li>
+                <li><strong>Moving Files</strong>: Use the <code>shutil.move()</code> function to move files.</li>
+                <li><strong>Deleting Files</strong>: Use the <code>os.remove()</code> function to delete files.</li>
+            </ul>
+            <p>Ensure you have the necessary permissions before performing file operations.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© College Sahayata. All rights reserved.</p>
+    </footer>
+</body>
+</html>

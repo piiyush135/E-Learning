@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BBA Course</title>
+    <style>
+        body {
+            background-image: url(high-angle-view-laptop-stationeries-blue-background.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            background-color: darkgrey;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+
+        h1 {
+            text-align: center;
+            background-color: azure;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        h1:hover {
+            background-color: #239ae9;
+        }
+
+        h2 {
+            margin-top: 20px;
+            background-color: aliceblue;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+
+        h2:hover {
+            background-color: #4d9bb9;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: #0056b3;
+        }
+
+        section ul {
+            display: none;
+            /* Hide by default */
+            list-style-type: none;
+            padding: 0;
+        }
+
+        section.active ul {
+            display: block;
+            /* Show when section is active */
+        }
+
+        section h3 {
+            cursor: pointer;
+        }
+
+        /* section {
+            display: none;
+        }
+
+        section.active {
+            display: block;
+        } */
+
+        #home {
+            display: flex;
+            justify-content: flex-start;
+            text-decoration: underline;
+            margin-left: 10px;
+            margin-top: 10px;
+        }
+
+        section {
+            transition: transform 0.3s ease;
+        }
+
+        section:hover {
+            transform: scale(1.03);
+        }
+
+        .accordion h3::before {
+            content: '\25B6\00a0';
+            transition: transform 0.3s ease;
+            display: inline-block;
+            margin-right: 5px;
+            color: #007bff;
+        }
+
+        .accordion.active h3::before {
+            transform: rotate(90deg);
+        }
+
+
+        footer {
+            background-color: #0f0808;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+
+        @media only screen and (max-width: 600px) {
+            h1 {
+                font-size: 20px;
+            }
+
+            h2 {
+                font-size: 18px;
+            }
+
+            section h3 {
+                font-size: 16px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <span id="home"><a href="main.html">Home</a></span>
+    <div class="container">
+        <h1>Bachelor of Business Administration (BBA)</h1>
+
+        <section>
+            <h2>About BBA</h2>
+            <p> BBA is a three-year undergraduate degree program that helps students develop 
+                skills to understand how businesses operate. BBA is a good option for students who want
+                 to pursue a career in business and management.</p>
+        </section>
+        <section>
+            <h2>Previous Years' Question Papers</h2>
+
+            <section class="accordion">
+                <h3>Semester 1</h3>
+                <ul>
+                    <li><a href="notes/BCA4 Environmental Science Unit2 3 Natural Resources - Water Resources.pdf"
+                            class="question-paper-link">Subject 1 - Question paper Year 2023</a> </li>
+                    <li><a href="notes/BCA4 Environmental Science Unit2 3 Natural Resources - Water Resources.pdf">Subject 1 - Question paper Year 2022</a></li>
+                    <li><a href="#">Subject 1 - Question paper Year 2021</a></li>
+                    <li><a href="#">Subject 1 - Question paper Year 2020</a></li>
+
+                </ul>
+                <ul>
+                    <li><a href="#">Subject 2 - Question paper Year 2023</a></li>
+                    <li><a href="#">Subject 2 - Question paper Year 2022</a></li>
+                    <li><a href="#">Subject 2 - Question paper Year 2021</a></li>
+                    <li><a href="#">Subject 2 - Question paper Year 2020</a></li>
+                </ul>
+            </section>
+
+            <section class="accordion">
+                <h3>Semester 2</h3>
+                <ul>
+                    <li><a href="notes/BCA4 Environmental Science Unit2 3 Natural Resources - Water Resources.pdf">Subject
+                            1 - Question paper Year 2023</a></li>
+                    <li><a href="#">Subject 2 - Question paper Year 2023</a></li>
+                    <li><a href="#">Subject 3 - Question paper Year 2023</a></li>
+                    <li><a href="#">Subject 4 - Question paper Year 2023</a></li>
+                </ul>
+            </section>
+
+            <!-- Add more semesters as needed -->
+        </section>
+
+        <section>
+            <h2>Study Notes</h2>
+
+            <section class="accordion">
+                <h3>Semester 1</h3>
+                <ul class="study-notes">
+                    <li><a href="#">Semester 1 Notes</a></li>
+                </ul>
+            </section>
+
+            <section class="accordion">
+                <h3>Semester 2</h3>
+                <ul class="study-notes">
+                    <li><a href="#">Semester 2 Notes</a></li>
+                </ul>
+            </section>
+
+            <!-- Add more semesters as needed -->
+        </section>
+    </div>
+
+    <script>
+        // JavaScript to toggle accordion sections
+        const accordionSections = document.querySelectorAll('.accordion h3');
+
+        const semesters = document.querySelectorAll('.accordion');
+
+        accordionSections.forEach(section => {
+            section.addEventListener('click', () => {
+                section.parentNode.classList.toggle('active');
+            });
+        });
+    </script>
+
+    <footer>
+        <p>© 2024 College Sahayata. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

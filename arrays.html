@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arrays Webpage</title>
+  <link rel="stylesheet" href="array.css">
+</head>
+
+<body>
+  <header>
+    <h1>Exploring Arrays</h1>
+    <a href="dsa.html" class="back-button">Back</a>
+  </header>
+
+  <main>
+    <section>
+      <h2>Introduction to Arrays</h2>
+      <p>An array is a data structure consisting of a collection of elements, each identified by at least one array
+        index or key. It is used to store multiple values in a single variable. Arrays in data structures help solve
+        some high-level problems like the "longest consecutive subsequence" program or some easy tasks like arranging
+        the same things in ascending order. The concept is to collect many objects of the same kind.</p>
+    </section>
+    <section>
+      <h2>What Are Arrays in Data Structures?</h2>
+      <img src="Arrays_in_ds-what-is-array-img1.png" alt="array image">
+      <p>In the context of Data Structures and Algorithms (DSA), an array is a fundamental data structure that stores a
+        collection of elements of the same type in contiguous memory locations. Each element in the array is accessed by
+        its index or position.</p>
+
+      <ol>
+        <li><strong>Fixed Size:</strong> Arrays have a fixed size, meaning the number of elements they can hold is
+          determined when they are created. This size cannot be changed dynamically during runtime.</li>
+
+        <li><strong>Contiguous Memory Allocation:</strong> Array elements are stored in contiguous memory locations,
+          which means the elements are stored one after the other in memory. This property allows for efficient memory
+          access, as elements can be accessed directly using their indices.</li>
+
+        <li><strong>Indexing:</strong> Elements in an array are accessed using their index. The index is typically a
+          non-negative integer that represents the position of the element within the array. The index of the first
+          element is usually 0, and the index of the last element is one less than the size of the array.</li>
+
+        <li><strong>Random Access:</strong> Arrays support random access to elements, which means any element can be
+          accessed directly by its index in constant time (O(1) time complexity).</li>
+
+        <li><strong>Homogeneous Elements:</strong> Arrays can only store elements of the same data type. For example, an
+          array of integers can only hold integer values, and an array of characters can only hold characters.</li>
+
+        <li><strong>Static vs. Dynamic Arrays:</strong> Some programming languages support dynamic arrays, which can
+          resize themselves dynamically to accommodate more elements if needed. Dynamic arrays typically use a resizing
+          strategy (e.g., doubling the size when full) to efficiently manage memory.</li>
+
+        <li><strong>Applications:</strong> Arrays are widely used in various algorithms and applications, including
+          sorting algorithms (e.g., insertion sort, merge sort), searching algorithms (e.g., binary search), dynamic
+          programming, representing matrices, and more.</li>
+      </ol>
+    </section>
+    <section>
+      <h2>Why Do You Need an Array in Data Structures?</h2>
+      <p>Arrays are an essential data structure in computer science and are widely used for several reasons:</p>
+
+      <ol>
+        <li><strong>Efficient Access:</strong> Arrays provide constant-time access to elements based on their indices.
+          This means that accessing any element in the array requires only a single operation, regardless of the size of
+          the array. This efficiency makes arrays suitable for applications where fast access to elements is crucial.
+        </li>
+
+        <li><strong>Memory Efficiency:</strong> Arrays use contiguous memory allocation, meaning that elements are
+          stored one after the other in memory. This memory layout is efficient in terms of space, as it minimizes
+          overhead and allows for efficient memory access patterns. Additionally, arrays have a fixed size, which can
+          lead to better memory management compared to dynamic data structures.</li>
+
+        <li><strong>Sequential Storage:</strong> Arrays are ideal for storing elements that have a sequential or linear
+          relationship. For example, arrays are commonly used to represent sequences of data such as lists, queues, and
+          stacks. The sequential storage provided by arrays makes it easy to traverse elements sequentially or perform
+          operations on them iteratively.</li>
+
+        <li><strong>Index-Based Access:</strong> Arrays allow for direct access to elements using their indices. This
+          index-based access enables efficient random access to elements, which is crucial for many algorithms and
+          applications. For example, arrays are often used in sorting and searching algorithms that require random
+          access to elements.</li>
+
+        <li><strong>Versatility:</strong> Arrays can store elements of the same data type, but they can also be used to
+          represent more complex data structures by storing references or pointers to other data structures. This
+          versatility allows arrays to be used in a wide range of applications, from simple lists to more complex data
+          structures like graphs and trees.</li>
+
+        <li><strong>Efficient Iteration:</strong> Arrays facilitate efficient iteration over elements, as they provide
+          direct access to each element based on its index. This property makes it easy to traverse the entire array or
+          perform operations on all elements in the array without the need for additional data structures or overhead.
+        </li>
+      </ol>
+    </section>
+    <section>
+      <h2>Benefits of Using Arrays</h2>
+      <ul>
+        <li>Arrays allow for efficient storage and retrieval of multiple values.</li>
+        <li>They provide a convenient way to organize related data.</li>
+        <li>Arrays facilitate iteration over elements, making it easier to perform operations on collections of data.
+        </li>
+        <li>They are widely supported in various programming languages.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Examples of Arrays</h2>
+      <p>Below are some examples of arrays in different programming languages:</p>
+      <pre><code>// JavaScript
+var numbers = [1, 2, 3, 4, 5];
+
+// Python
+fruits = ["apple", "banana", "cherry"]
+
+// Java
+int[] myArray = {10, 20, 30, 40, 50};</code></pre> <br>
+    </section>
+    <section>
+      <h2>What Are the Types of Arrays?</h2>
+      <p>There are majorly two types of arrays:</p>
+
+      <div class="array-type">
+        <h3>One-Dimensional Arrays</h3>
+        <img src="Arrays_in_ds-array-type-1d-img1.png" alt="One-Dimensional Array Image">
+        <p>You can imagine a 1D array as a row, where elements are stored one after another.</p>
+      </div>
+
+      <div class="array-type">
+        <h3>Multi-Dimensional Arrays</h3>
+
+        <div class="sub-array-type">
+          <h4>Two-Dimensional Arrays</h4>
+          <img src="Arrays_in_ds-array-type-2d-img1.png" alt="Two-Dimensional Array Image">
+          <p>You can imagine it like a table where each cell contains elements.</p>
+        </div>
+
+        <div class="sub-array-type">
+          <h4>Three-Dimensional Arrays</h4>
+          <img src="Arrays_in_ds-array-type-3d-img1.png" alt="Three-Dimensional Array Image">
+          <p>You can imagine it like a cuboid made up of smaller cuboids where each cuboid can contain an element.</p>
+        </div>
+
+      </div>
+    </section>
+    <section>
+      <h2>What Operations Can You Perform on an Array?</h2>
+
+      <div class="operation">
+        <h3>Traversal</h3>
+        <img src="Arrays_in_ds-op-traverse-img1.png" alt="Traversal Image">
+        <p>Traversal in an array is a process of visiting each element once.</p>
+        <pre><code style="font-size: 15px;">// Sample code for traversal
+       
+      <code>#include&lt;stdio.h&gt;</code>
+                  
+      int main() {
+          int a[5] = {2, 3, 5, 7, 11};
+          for(int i=0; i<5; i++) {
+              printf("%d\n", a[i]); 
+          }
+          return 0;
+      }</code></pre>
+        <img src="Arrays_in_ds-op-traverse-img2.png" alt="Traversal Example Image">
+      </div>
+
+      <div class="operation">
+        <h3>Insertion</h3>
+        <img src="Arrays_in_ds-op-insertion-img1.png" alt="Insertion Image">
+        <p>Insertion in an array is the process of including one or more elements in an array.</p>
+
+        <div class="insertion-method">
+          <h4>At the Beginning</h4>
+          <pre><code style="font-size: 15px;">// Sample code for insertion at the beginning
+   <code>#include&lt;stdio.h&gt;</code>
+                  
+      int main() {
+          int array[10], n, i, item;
+          printf("Enter the size of array: ");
+          scanf("%d", &n);
+          printf("\nEnter Elements in array: ");
+          for(i=0; i<n; i++) {
+              scanf("%d", &array[i]);
+          }
+          printf("\nEnter the element at the beginning: ");
+          scanf("%d", &item);
+          n++;
+          for(i=n; i>1; i--) {
+              array[i-1] = array[i-2];
+          }
+          array[0] = item;
+          printf("Resultant array elements: ");
+          for(i=0; i<n; i++) {
+              printf("\n%d", array[i]);
+          }
+          return 0;
+      }</code></pre>
+          <img src="Arrays_in_ds-op-insertionbeg-img1.png" alt="Insertion Beginning Example Image">
+        </div>
+
+        <h4> At the End: </h4>
+        <pre><code style="font-size: 15px"> Code:
+
+<code>#include&lt;stdio.h&gt;</code>
+<code>#include&lt;conio.h&gt;</code>
+
+int main()
+
+{
+
+int array[10], i, values;
+
+printf("Enter 5 Array Elements: ");
+
+for(i=0; i<5; i++)
+
+     scanf("%d", &array[i]);
+
+printf("\nEnter Element to Insert: ");
+
+scanf("%d", &values);
+
+array[i] = values;
+
+printf("\nThe New Array is:\n");
+
+for(i=0; i<6; i++)
+
+     printf("%d ", array[i]);
+
+getch();
+
+return 0;
+
+}</code></pre>
+
+        <img src="Arrays_in_ds-op-insertionend-img1.png" alt="Insertion Beginning Example Image">
+      </div>
+
+      <h4>At a Specific Position: </h4><!-- Similar structure for insertion at end and at specific position -->
+      <pre><code style="font-size: 15px;">code:
+        
+        <code>#include&lt;stdio.h&gt;</code>
+        
+        int main()
+        
+        {
+        
+         int array[100], pos, size, val;
+        
+         printf("Enter size of the array:");
+        
+         scanf("%d", &size);
+        
+         printf("\nEnter %d elements\n", size);
+        
+         for (int i = 0; i < size; i++)
+        
+          scanf("%d", &array[i]);
+        
+         printf("Enter the insertion location\n");
+        
+         scanf("%d", &pos);
+        
+         printf("Enter the value to insert\n");
+        
+         scanf("%d", &val);
+        
+         for (int i = size - 1; i >= pos - 1; i--)
+        
+          array[i+1] = array[i];
+        
+         array[pos-1] = val;
+        
+         printf("Resultant array is\n");
+        
+         for (int i = 0; i <= size; i++)
+        
+          printf("%d\n", array[i]);
+        
+         return 0;
+        
+        }</code></pre>
+
+      <img src="Arrays_in_ds-op-insertionpos-img1.png" alt="Insertion Beginning Example Image">
+
+
+      </div>
+
+      <!-- Similar structure for other operations: Deletion and Searching -->
+
+    </section>
+    <section>
+      <h3>Deletion</h3>
+      <img src="Arrays_in_ds-op-deletion-img1.png" alt="Deletion Image">
+      <p>Deletion of an element is the process of removing the desired element and re-organizing it.</p>
+      <p>You can also do deletion in different ways:</p>
+    
+      <div class="deletion-method">
+        <h4>At the Beginning</h4>
+        <pre><code>// Sample code for deletion at the beginning
+    <code>#include&lt;stdio.h&gt;</code>
+    
+    int main() {
+        int n,array[10];
+        printf("Enter the size of an array: ");
+        scanf("%d", &n);
+        printf("Enter elements in an array: ");
+        for(int i=0; i<n; i++)
+            scanf("%d", &array[i]);
+        n--;
+        for(int i=0; i<n; i++)
+            array[i] = array[i+1];
+        printf("\nAfter deletion: ");
+        for(int i=0; i<n; i++)
+            printf("\n%d", array[i]);
+    }</code></pre>
+        <img src="Arrays_in_ds-op-deletionbeg-img1.png" alt="Deletion Beginning Example Image">
+      </div>
+    
+      <div class="deletion-method">
+        <h4>At the End</h4>
+        <pre><code>// Sample code for deletion at the end
+    <code>#include&lt;stdio.h&gt;</code>
+    
+    int main() {
+        int n,array[10];
+        printf("Enter the size of an array: ");
+        scanf("%d", &n);
+        printf("Enter elements in an array: ");
+        for(int i=0; i<n; i++)
+            scanf("%d", &array[i]);
+        printf("\nAfter deletion, array elements are:");
+        for(int i=0; i<n-1; i++)
+            printf("\n%d", array[i]);
+    }</code></pre>
+        <img src="Arrays_in_ds-op-deletionend-img1.png" alt="Deletion End Example Image">
+      </div>
+    </section>
+    
+
+
+  </main>
+
+  <footer>
+    <p>© College Sahayata. All rights reserved.</p>
+  </footer>
+</body>
+
+</html>

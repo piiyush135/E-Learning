@@ -1,0 +1,190 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Code Editor</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.1/codemirror.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.1/theme/dracula.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* height: 100vh; */
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+            background: #292b2e;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            color: #fff;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+            color: #25d8d8;
+        }
+       h4{
+        text-align: center;
+            margin-top: 20px;
+            color: #25d8d8;
+       }
+        textarea {
+            width: 100%;
+            height: 400px;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            background-color: #333;
+            color: #fff;
+            resize: none;
+            font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+            font-size: 14px;
+        }
+
+        textarea:focus {
+            outline: none;
+            border: 2px solid #25d8d8;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #25d8d8;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0c5348;
+        }
+
+        #output {
+            width: 100%;
+            margin: 20px 0;
+            padding: 10px;
+            border: 2px solid #25d8d8;
+            border-radius: 5px;
+            background-color: #333;
+            overflow: auto;
+            font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+            font-size: 14px;
+            color: #25d8d8;
+        }
+
+        .CodeMirror-hints {
+            z-index: 999;
+            position: absolute;
+            background: #f8f8f8;
+            border: 1px solid #ddd;
+            font-size: 90%;
+            overflow-y: auto;
+            max-height: 20em;
+        }
+
+        .CodeMirror-hint {
+            margin: 0;
+            padding: 2px 6px;
+            cursor: pointer;
+        }
+
+        .CodeMirror-hint-active {
+            background: #d0e4f6;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Online HTML Code Editor</h1>
+        <textarea id="code" name="code">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+&lt;meta charset="UTF-8"&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+&lt;title&gt;My HTML Page&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h1&gt;Hello, world!&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;</textarea>
+        <button onclick="runCode()">Run Code</button>
+        <h1>OUTPUT</h1>
+        <div id="output" contenteditable="true" spellcheck="false"></div>
+        <h4>DEVELOPED BY COLLEGE SAHAYATA</h4>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.1/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.1/mode/xml/xml.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.1/mode/javascript/javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.1/mode/css/css.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.36.0/autocomplete.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.1/addon/hint/html-hint.min.js"></script>
+
+
+    <script>
+        var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+            lineNumbers: true,
+            mode: "htmlmixed",
+            theme: "dracula",
+            extraKeys: {
+                "Ctrl-Space": "autocomplete" // Enable autocomplete on Ctrl+Space
+            },
+            hint: CodeMirror.hint.html, // Attach autocomplete to the editor
+            hintOptions: {
+                completeSingle: false
+            }
+        });
+        
+        // Bind runCode() function to the 'input' event of the textarea
+        editor.on("input", function() {
+            runCode();
+        });
+        
+        function runCode() {
+            var code = editor.getValue();
+            var currentTime = new Date().toLocaleString(); // Get current time
+            var iframe = document.createElement('iframe');
+            iframe.style.width = '100%';
+            iframe.style.height = '300px';
+            document.getElementById('output').innerHTML = ''; // Clear previous content
+            document.getElementById('output').appendChild(iframe);
+            var iframeDocument = iframe.contentWindow.document;
+            iframeDocument.open();
+            
+            // Check if the code is valid HTML
+            try {
+                var tempDoc = new DOMParser().parseFromString(code, 'text/html');
+                if (tempDoc.body.childNodes.length === 0) {
+                    throw new Error('Invalid HTML code.');
+                }
+            } catch (error) {
+                iframeDocument.write('<p style="color: red;">Error: ' + error.message + '</p>');
+                iframeDocument.close();
+                return; // Exit the function if HTML is invalid
+            }
+            
+            // Write the current time to the iframe
+            iframeDocument.write('<p style="color: #25d8d8;">Current Time: ' + currentTime + '</p>');
+            
+            // Write the code to the iframe if it's valid
+            iframeDocument.write('<!DOCTYPE html><html><head><title>Output</title></head><body style="color: #25d8d8;">' + code + '</body></html>');
+            iframeDocument.close();
+        }
+    </script>
+</body>
+</html>

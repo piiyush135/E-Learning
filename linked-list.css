@@ -1,0 +1,70 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 20px 5%;
+    width: 100%;
+    position: relative;
+    box-sizing: border-box; /* Ensure padding is included in the width */
+  }
+  
+  h1 {
+    display: inline-block;
+    margin: 0; /* Remove default margin */
+  }
+  
+  .back-button {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    border: 1px solid white;
+    border-radius: 5px;
+    transition: background-color 0.3s, border-color 0.3s;
+    font-size: 0.8em; /* Set the font size relative to its container */
+  }
+ 
+  
+  .back-button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.5);
+  }
+  
+  main {
+    margin: 20px 5%;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+  }
+  @media only screen and (max-width: 480px) {
+  header {
+    padding: 20px 10px;
+  }
+  
+  .back-button {
+    padding: 3px 6px;
+    font-size: 0.7em;
+    left: 5px;
+  }
+}
+
+  

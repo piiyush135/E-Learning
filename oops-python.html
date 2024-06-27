@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Basics: Object-Oriented Programming</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional CSS for this specific page */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #67e085;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            position:relative;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        section {
+            margin-bottom: 30px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #6c5ce7;
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        pre {
+            background-color: #f0f0f0;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        code {
+            font-family: 'Courier New', monospace;
+        }
+
+        footer {
+            background-color: #0f0808;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        .back-button {
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: white;
+            text-decoration: none;
+            padding: 5px 10px;
+            border: 1px solid white;
+            border-radius: 5px;
+            transition: background-color 0.3s, border-color 0.3s;
+            font-size: 0.8em;
+        }
+
+        .back-button:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            border-color: rgba(255, 255, 255, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Python Basics: Object-Oriented Programming</h1>
+        <a href="main.html" class="back-button">Back</a>
+    </header>
+
+    <main>
+        <section>
+            <h2>Introduction to Object-Oriented Programming</h2>
+            <p>Object-Oriented Programming (OOP) is a programming paradigm based on the concept of "objects", which can contain data in the form of fields (attributes or properties), and code, in the form of procedures (methods).</p>
+            <p>Python is a multi-paradigm programming language, which means it supports different programming styles, including OOP.</p>
+        </section>
+
+        <section>
+            <h2>Classes and Objects</h2>
+            <p>In Python, everything is an object. A class is a blueprint for creating objects (instances) with specific attributes and methods.</p>
+            <pre><code>class MyClass:
+    def __init__(self, name):
+        self.name = name
+
+    def greet(self):
+        return "Hello, " + self.name + "!"
+
+# Create an instance of MyClass
+obj = MyClass("Alice")
+print(obj.greet())  # Output: Hello, Alice!
+</code></pre>
+            <p>In this example, <code>MyClass</code> is a class with a constructor method (<code>__init__</code>) and a <code>greet</code> method.</p>
+        </section>
+
+        <section>
+            <h2>Inheritance</h2>
+            <p>Inheritance allows a class (subclass) to inherit the properties and methods of another class (superclass). This promotes code reuse and modularity.</p>
+            <pre><code>class Animal:
+    def __init__(self, name):
+        self.name = name
+
+    def speak(self):
+        return "Unknown sound"
+
+class Dog(Animal):
+    def speak(self):
+        return "Woof!"
+
+# Create instances of Animal and Dog
+animal = Animal("Animal")
+dog = Dog("Dog")
+
+print(animal.speak())  # Output: Unknown sound
+print(dog.speak())     # Output: Woof!
+</code></pre>
+            <p>In this example, <code>Dog</code> is a subclass of <code>Animal</code>, and it overrides the <code>speak</code> method.</p>
+        </section>
+
+        <section>
+            <h2>Encapsulation</h2>
+            <p>Encapsulation is the bundling of data (attributes) and methods that operate on the data within a class. It hides the internal state of an object from the outside world and only exposes a public interface for interacting with the object.</p>
+            <p>In Python, encapsulation is achieved using access modifiers:</p>
+            <ul>
+                <li><strong>Public</strong>: Accessible from outside the class.</li>
+                <li><strong>Protected</strong>: Accessible within the class and its subclasses.</li>
+                <li><strong>Private</strong>: Accessible only within the class.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Polymorphism</h2>
+            <p>Polymorphism allows objects of different classes to be treated as objects of a common superclass. It enables the same method name to be used for different types of objects.</p>
+            <pre><code>class Shape:
+    def draw(self):
+        return "Drawing a shape"
+
+class Circle(Shape):
+    def draw(self):
+        return "Drawing a circle"
+
+class Rectangle(Shape):
+    def draw(self):
+        return "Drawing a rectangle"
+
+# Create instances of Circle and Rectangle
+circle = Circle()
+rectangle = Rectangle()
+
+print(circle.draw())     # Output: Drawing a circle
+print(rectangle.draw())  # Output: Drawing a rectangle
+</code></pre>
+            <p>In this example, both <code>Circle</code> and <code>Rectangle</code> classes inherit from the <code>Shape</code> class and override the <code>draw</code> method.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© College Sahayata. All rights reserved.</p>
+    </footer>
+</body>
+</html>
